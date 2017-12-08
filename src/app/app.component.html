@@ -274,6 +274,36 @@
           </tr>
         </tbody>
       </table>
+      <h3 class="h6 text-info">Add Category</h3>
+      <form class="py-3">
+          <div class="form-group">
+            <label for="category">Category</label>
+            <input type="text" class="form-control" id="category" placeholder="Enter category name">
+          </div>
+          <div class="text-right">
+            <button type="button" class="btn btn-lg btn-outline-secondary">Cancel</button>
+            <button type="submit" class="btn btn-lg btn-info">Add Category</button>
+          </div>
+        </form>
+        <h3 class="h6 text-info">Add Item</h3>
+        <form class="py-3">
+            <div class="form-group">
+              <label for="item">Item</label>
+              <input type="text" class="form-control" id="item" placeholder="Enter item name">
+            </div>
+            <div class="form-group">
+              <label for="category-select">Select Category</label>
+              <select id="category-select" class="form-control">
+                <option value="food" selected>Food</option>
+                <option value="cloath">Cloath</option>
+                <option value="rent">Rent</option><!-- Room or flat will be the item in this category -->
+              </select>
+              </div>
+            <div class="text-right">
+              <button type="button" class="btn btn-lg btn-outline-secondary">Cancel</button>
+              <button type="submit" class="btn btn-lg btn-info">Add Item</button>
+            </div>
+          </form>
     </div>
   </div>
 </div>
