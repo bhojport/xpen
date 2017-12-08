@@ -26,16 +26,16 @@
               <a class="nav-link" href="#">Add Cash</a>
             </li>
             <li class="nav-item">
-                <hr class="w-25 ml-0" />
-              </li>
+              <hr class="w-25 ml-0" />
+            </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Settings</a>
-              </li>
+              <a class="nav-link" href="#">Settings</a>
+            </li>
           </ul>
         </div>
       </nav>
       <form class="py-3">
-          <h2 class="h4 text-info">Apply Expense</h2>
+        <h2 class="h4 text-info">Apply Expense</h2>
         <div class="form-group">
           <label for="date">Date</label>
           <input type="date" class="form-control" id="date">
@@ -55,27 +55,27 @@
       </form>
       <form class="py-3">
         <h2 class="h4 text-info">Apply Credit Transaction</h2>
-      <div class="form-group">
-        <label for="date">Date</label>
-        <input type="date" class="form-control" id="date">
-      </div>
-      <div class="form-group">
-        <label for="creditor">Creditor</label>
-        <input type="text" class="form-control" id="creditor" placeholder="Enter creditor name">
-      </div>
-      <div class="form-group">
-        <label for="item">Item</label>
-        <input type="text" class="form-control" id="item" placeholder="Enter item">
-      </div>
-      <div class="form-group">
-        <label for="amount">Amount</label>
-        <input type="text" class="form-control" id="amount" placeholder="Enter amount">
-      </div>
-      <div class="text-right">
-        <button type="button" class="btn btn-lg btn-outline-secondary">Cancel</button>
-        <button type="submit" class="btn btn-lg btn-info">Apply</button>
-      </div>
-    </form>
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" class="form-control" id="date">
+        </div>
+        <div class="form-group">
+          <label for="creditor">Creditor</label>
+          <input type="text" class="form-control" id="creditor" placeholder="Enter creditor name">
+        </div>
+        <div class="form-group">
+          <label for="item">Item</label>
+          <input type="text" class="form-control" id="item" placeholder="Enter item">
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <input type="text" class="form-control" id="amount" placeholder="Enter amount">
+        </div>
+        <div class="text-right">
+          <button type="button" class="btn btn-lg btn-outline-secondary">Cancel</button>
+          <button type="submit" class="btn btn-lg btn-info">Apply</button>
+        </div>
+      </form>
       <h2 class="h4 text-info">Today Expenses</h2>
       <table class="table table-hover">
         <thead>
@@ -111,6 +111,82 @@
           </tr>
         </tbody>
       </table>
+      <h2 class="h4 text-info">Dashboard</h2>
+      <h3 class="h6 text-info">Monthly Expenses</h3>
+      <h4 class="h6">For April</h4>
+      <input type="text" value="2017" placeholder="Enter year" class="p-1 mb-3">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Potato</td>
+            <td>1KG</td>
+            <td class="text-right">70</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Onion</td>
+            <td>1KG</td>
+            <td class="text-right">40</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Tea</td>
+            <td>1PKT</td>
+            <td class="text-right">20</td>
+          </tr>
+          <tr>
+            <th scope="row" colspan="3">Total</th>
+            <td class="text-right">130</td>
+          </tr>
+        </tbody>
+      </table>
+      <nav>
+        <ul class="pagination pagination-sm float-right">
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="#">4</a>
+          </li>
+          <li class="page-item disabled" tabindex="-1">
+            <a class="page-link" href="#">5</a>
+          </li>
+          <li class="page-item disabled" tabindex="-1">
+            <a class="page-link" href="#">6</a>
+          </li>
+          <li class="page-item disabled" tabindex="-1">
+            <a class="page-link" href="#">7</a>
+          </li>
+          <li class="page-item disabled" tabindex="-1">
+            <a class="page-link" href="#">8</a>
+          </li>
+          <li class="page-item disabled" tabindex="-1">
+            <a class="page-link" href="#">9</a>
+          </li>
+          <li class="page-item disabled" tabindex="-1">
+            <a class="page-link" href="#">10</a>
+          </li>
+          <li class="page-item disabled" tabindex="-1">
+            <a class="page-link" href="#">11</a>
+          </li>
+          <li class="page-item disabled" tabindex="-1">
+            <a class="page-link" href="#">12</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 </div>
