@@ -14,13 +14,19 @@
               <a class="nav-link active" href="#">Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Today Expenses</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#">Apply Expense</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Apply Credit Transaction</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Apply Debit Transaction</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pay Credit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Receive Debit</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Add Cash</a>
@@ -76,76 +82,118 @@
           <button type="submit" class="btn btn-lg btn-info">Apply</button>
         </div>
       </form>
-      <h2 class="h4 text-info">Today Expenses</h2>
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Item</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Potato</td>
-            <td>1KG</td>
-            <td class="text-right">70</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Onion</td>
-            <td>1KG</td>
-            <td class="text-right">40</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Tea</td>
-            <td>1PKT</td>
-            <td class="text-right">20</td>
-          </tr>
-          <tr>
-            <th scope="row" colspan="3">Total</th>
-            <td class="text-right">130</td>
-          </tr>
-        </tbody>
-      </table>
+      <form class="py-3">
+        <h2 class="h4 text-info">Pay Credit</h2>
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" class="form-control" id="date">
+        </div>
+        <div class="form-group">
+          <label for="creditor">Creditor</label>
+          <input type="text" class="form-control" id="creditor" placeholder="Enter creditor name">
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <input type="text" class="form-control" id="amount" placeholder="Enter amount">
+        </div>
+        <div class="text-right">
+          <button type="button" class="btn btn-lg btn-outline-secondary">Cancel</button>
+          <button type="submit" class="btn btn-lg btn-info">Pay</button>
+        </div>
+      </form>
+      <form class="py-3">
+        <h2 class="h4 text-info">Apply Debit Transaction</h2>
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" class="form-control" id="date">
+        </div>
+        <div class="form-group">
+          <label for="debtor">Debtor</label>
+          <input type="text" class="form-control" id="debtor" placeholder="Enter debtor name">
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <input type="text" class="form-control" id="amount" placeholder="Enter amount">
+        </div>
+        <div class="text-right">
+          <button type="button" class="btn btn-lg btn-outline-secondary">Cancel</button>
+          <button type="submit" class="btn btn-lg btn-info">Apply</button>
+        </div>
+      </form>
+      <form class="py-3">
+        <h2 class="h4 text-info">Receive Debit</h2>
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" class="form-control" id="date">
+        </div>
+        <div class="form-group">
+          <label for="debtor">Debtor</label>
+          <input type="text" class="form-control" id="debtor" placeholder="Enter debtor name">
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <input type="text" class="form-control" id="amount" placeholder="Enter amount">
+        </div>
+        <div class="text-right">
+          <button type="button" class="btn btn-lg btn-outline-secondary">Cancel</button>
+          <button type="submit" class="btn btn-lg btn-info">Receive</button>
+        </div>
+      </form>
+      <form class="py-3">
+        <h2 class="h4 text-info">Add Cash</h2>
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" class="form-control" id="date">
+        </div>
+        <div class="form-group">
+          <label for="cash-from">Cash Received From</label>
+          <input type="text" class="form-control" id="cash-from" placeholder="Enter person name">
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <input type="text" class="form-control" id="amount" placeholder="Enter amount">
+        </div>
+        <div class="form-group">
+          <label for="remarks">Remarks</label>
+          <textarea class="form-control" placeholder="Cash received from salary." id="remarks"></textarea>
+        </div>
+        <div class="text-right">
+          <button type="button" class="btn btn-lg btn-outline-secondary">Cancel</button>
+          <button type="submit" class="btn btn-lg btn-info">Apply</button>
+        </div>
+      </form>
       <h2 class="h4 text-info">Dashboard</h2>
       <h3 class="h6 text-info">Monthly Expenses</h3>
       <h4 class="h6">For April</h4>
       <input type="text" value="2017" placeholder="Enter year" class="p-1 mb-3">
-      <!-- / To be noted: all expenses of the day will be shown in one day by group calculation -->
+      <div class="small">Hint: Click on the row to show detailed expenses.</div>
+      <!-- On click: Show daily expenses popup with that date but only of that category -->
       <table class="table table-hover">
         <thead>
           <tr>
             <th scope="col">Date</th>
-            <th scope="col">Item</th>
-            <th scope="col">Quantity</th>
+            <th scope="col">Category</th>
             <th scope="col">Amount</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1/1/2017</th>
-            <td>Potato</td>
-            <td>1KG</td>
+            <td>Food</td>
             <td class="text-right">70</td>
           </tr>
           <tr>
             <th scope="row">2/1/2017</th>
-            <td>Onion</td>
-            <td>1KG</td>
+            <td>Cloath</td>
             <td class="text-right">40</td>
           </tr>
           <tr>
             <th scope="row">3/1/2017</th>
-            <td>Tea</td>
-            <td>1PKT</td>
+            <td>Rent</td>
             <td class="text-right">20</td>
           </tr>
           <tr>
-            <th scope="row" colspan="3">Total</th>
+            <th scope="row" colspan="2">Total</th>
             <td class="text-right">130</td>
           </tr>
         </tbody>
@@ -188,6 +236,44 @@
           </li>
         </ul>
       </nav>
+      <br clear="right" />
+      <h3 class="h6 text-info">Daily Expenses</h3>
+      <input type="text" value="1/1/2017" placeholder="Enter date" class="p-1 mb-3">
+      <!-- / To be noted: all expenses of the day will be shown in one day by group calculation -->
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Potato</td>
+            <td>1KG</td>
+            <td class="text-right">70</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Onion</td>
+            <td>1KG</td>
+            <td class="text-right">40</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Tea</td>
+            <td>1PKT</td>
+            <td class="text-right">20</td>
+          </tr>
+          <tr>
+            <th scope="row" colspan="3">Total</th>
+            <td class="text-right">130</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
