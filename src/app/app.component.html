@@ -328,21 +328,35 @@
       </form>
       <form class="py-3">
         <h2 class="h4 text-info">Settings</h2>
-        <div class="alert alert-danger">Need to think what we can have inside settings!</div>
-        <!--
           <div class="form-group">
-            <label for="date">Date</label>
-            <input type="date" class="form-control" id="date">
+            <label for="language-select">Language</label>
+            <select id="language-select" class="form-control">
+              <option value="english">English</option>
+              <option value="nepali">Nepali</option>
+            </select>
           </div>
           <div class="form-group">
-            <label for="item">Item</label>
-            <input type="text" class="form-control" id="item" placeholder="Enter item">
+            <input type="checkbox" id="set-item-checkobx" checked class="align-middle" style="width:25px;height:25px;">
+            <label for="set-item-checkobx">Automatically add item to default cateogry.</label><!-- if no item is found -->
+            <label for="category-select">Default Category</label>
+            <select id="category-select" class="form-control">
+              <option value="food" selected>Food</option>
+              <option value="cloath">Cloath</option>
+              <option value="gym">Gym</option>
+            </select>
           </div>
           <div class="form-group">
-            <label for="amount">Amount</label>
-            <input type="text" class="form-control" id="amount" placeholder="Enter amount">
-          </div>
-        -->
+              <input type="checkbox" id="create-creditor-checkobx" checked class="align-middle" style="width:25px;height:25px;">
+              <label for="create-creditor-checkobx">Automatically create creditor.</label><!-- while creating transaction for credit -->
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="create-debtor-checkobx" checked class="align-middle" style="width:25px;height:25px;">
+                <label for="create-debtor-checkobx">Automatically create debtor.</label><!-- while creating transaction for credit -->
+              </div>
+              <div class="form-group">
+                  <input type="checkbox" id="create-person-checkobx" checked class="align-middle" style="width:25px;height:25px;">
+                  <label for="create-person-checkobx">Automatically create person.</label><!-- while creating transaction for credit -->
+                </div>
         <div class="text-right">
           <button type="button" class="btn btn-lg btn-outline-secondary">Cancel</button>
           <button type="submit" class="btn btn-lg btn-info">Save Settings</button>
