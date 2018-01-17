@@ -358,7 +358,16 @@
                   <label for="create-person-checkobx">Automatically create person.</label><!-- while creating transaction for credit -->
                 </div>
                 <h3 class="h6">Member Settings</h3>
-                <p>(Need to think again. Users should be able to change settings for multiple members.)</p>
+                <div class="form-group">
+                  <label for="member-user">Settings for:</label>
+                  <select id="member-user">
+                    <option value="" selected>Select user</option>
+                    <option value="6">Binisha</option>
+                    <option value="5">Ritika</option>
+                    <option value="4" data-uuid="uuid">Laxmi</option>
+                    <!-- Warning! see note on gdoc on example data-->
+                  </select>
+                </div>
                 <div class="form-group">
                   <input type="checkbox" id="create-person-checkobx" checked class="align-middle" style="width:25px;height:25px;">
                   <label for="create-person-checkobx">Allow credit transaction</label>
